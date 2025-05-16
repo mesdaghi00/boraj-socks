@@ -1,28 +1,127 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>بوراج | جوراب ورزشی</title>
   <style>
     body {
-      font-family: sans-serif;
-      text-align: center;
-      padding: 50px;
-      background: #f3f3f3;
-    }
-    h1 {
+      font-family: Tahoma, sans-serif;
+      background: #f9f9f9;
       color: #333;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
     }
-    img {
-      width: 200px;
-      margin-top: 20px;
+    header {
+      background: #004aad;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .intro p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+    .products {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .product-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 250px;
+      padding: 15px;
+      text-align: center;
+    }
+    .product-card img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+    .product-card h3 {
+      margin: 15px 0 10px;
+      color: #004aad;
+    }
+    .product-card p {
+      font-size: 1em;
+      color: #555;
+      margin-bottom: 15px;
+    }
+    .btn-contact {
+      display: inline-block;
+      background: #004aad;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .btn-contact:hover {
+      background: #003080;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #eee;
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <h1>به صفحه‌ی رسمی بوراج خوش آمدید!</h1>
-  <p>ما جوراب‌های حرفه‌ای برای ورزشکاران حرفه‌ای تولید می‌کنیم.</p>
-  <img src="https://i.imgur.com/0u0bKxP.png" alt="لوگوی بوراج">
+  <header>
+    <h1>بوراج - جوراب ورزشی حرفه‌ای</h1>
+  </header>
+  <main>
+    <section class="intro">
+      <p>ما جوراب‌هایی با کیفیت بالا برای ورزشکاران حرفه‌ای و علاقه‌مند ارائه می‌کنیم.  
+         راحتی، دوام و طراحی به‌روز شعار ماست.</p>
+    </section>
+
+    <section class="products">
+      <div class="product-card">
+        <img src="https://i.imgur.com/UsfXlQE.jpg" alt="جوراب شماره 1" />
+        <h3>جوراب شماره 1</h3>
+        <p>مناسب برای بسکتبال و والیبال، با قابلیت تنفس عالی.</p>
+      </div>
+      <div class="product-card">
+        <img src="https://i.imgur.com/W8aO4zZ.jpg" alt="جوراب شماره 2" />
+        <h3>جوراب راه‌راه</h3>
+        <p>طراحی زیبا با خطوط رنگی، مناسب ورزش‌های مختلف.</p>
+      </div>
+      <div class="product-card">
+        <img src="https://i.imgur.com/j7s8r8p.jpg" alt="جوراب نایک استایل" />
+        <h3>جوراب نایک استایل</h3>
+        <p>طرح اسپرت و محبوب، با کیفیت عالی و راحتی بی‌نظیر.</p>
+      </div>
+    </section>
+
+    <section style="text-align:center; margin-top: 40px;">
+      <a href="https://wa.me/989919446360" class="btn-contact" target="_blank">تماس از طریق واتس‌اپ</a>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 بوراج. همه حقوق محفوظ است.
+  </footer>
 </body>
 </html>
