@@ -1,100 +1,115 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<!DOCTYPE html><html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Buraj Socks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بوراج | جوراب ورزشی</title>
   <style>
     body {
       margin: 0;
-      font-family: "Vazirmatn", sans-serif;
+      font-family: Vazirmatn, sans-serif;
       background-color: #ffffff;
-      color: #000;
-      text-align: center;
+      color: #000000;
+      direction: rtl;
     }
     header {
-      background-color: #000;
-      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: 1rem;
+      border-bottom: 1px solid #ccc;
+    }
+    header img {
+      height: 50px;
+    }
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem;
       font-size: 1.5rem;
+      font-weight: bold;
     }
-    .video-container {
-      margin: 2rem auto;
-      max-width: 600px;
+    .gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 1rem;
     }
-    video {
+    .gallery img {
+      height: 200px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
       width: 100%;
-      border-radius: 16px;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
     }
-    .slider {
-      margin: 2rem auto;
-      max-width: 300px;
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 1rem;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 10px;
+      text-align: center;
     }
-    .slider img {
+    .modal-content img {
       width: 100%;
       border-radius: 10px;
-      display: none;
     }
-    .slider img.active {
-      display: block;
-    }
-    .contact {
-      margin: 2rem auto;
-      font-size: 1.2rem;
-    }
-    .contact a {
+    .close {
       color: #000;
-      text-decoration: none;
-      margin: 0 1rem;
-      border: 1px solid #000;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      display: inline-block;
+      float: left;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
     }
     footer {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #777;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    footer a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-
-  <header>با بوراج به تمرینات کیفیت بده</header>
-
-  <div class="video-container">
-    <video autoplay muted loop playsinline>
-      <source src="boraj-reel.mp4" type="video/mp4">
-      مرورگر شما از پخش این ویدیو پشتیبانی نمی‌کند.
-    </video>
-  </div>
-
-  <div class="slider">
-    <img src="AKS1.jpg" class="active" alt="محصول ۱" />
-    <img src="AKS2.jpg" alt="محصول ۲" />
-    <img src="AKS3.jpg" alt="محصول ۳" />
-    <img src="AKS4.jpg" alt="محصول ۴" />
-  </div>
-
-  <div class="contact">
-    <p>برای ثبت سفارش و اطلاع از موجودی و مشاوره:</p>
-    <a href="https://wa.me/989123456789" target="_blank">واتساپ</a>
+  <header>
+    <img src="logo.png" alt="لوگوی بوراج" />
+  </header>  <section class="hero">
+    با <strong>بوراج</strong> به تمرینات کیفیت بده
+  </section>  <section class="gallery">
+    <img src="AKS1.jpg" alt="جوراب 1" onclick="openModal(1)" />
+    <img src="AKS2.jpg" alt="جوراب 2" onclick="openModal(2)" />
+    <img src="AKS3.jpg" alt="جوراب 3" onclick="openModal(3)" />
+    <img src="AKS4.jpg" alt="جوراب 4" onclick="openModal(4)" />
+  </section>  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modal-img" src="" alt="محصول" />
+      <p>جنس: کف حوله‌ای نخ اعلا<br>سایز: فری‌سایز<br>قیمت: تماس بگیرید<br>موجودی: محدود</p>
+    </div>
+  </div>  <footer>
+    <p>برای سفارش و مشاوره:</p>
+    <a href="https://wa.me/98xxxxxxxxxx" target="_blank">واتساپ</a>
     <a href="https://instagram.com/_boraj" target="_blank">اینستاگرام</a>
-  </div>
-
-  <footer>
-    © 2025 Buraj Socks. همه حقوق محفوظ است.
-  </footer>
-
-  <script>
-    let images = document.querySelectorAll('.slider img');
-    let current = 0;
-    setInterval(() => {
-      images[current].classList.remove('active');
-      current = (current + 1) % images.length;
-      images[current].classList.add('active');
-    }, 3000);
-  </script>
-
-</body>
+  </footer>  <script>
+    function openModal(num) {
+      document.getElementById("modal-img").src = `AKS${num}.jpg`;
+      document.getElementById("modal").style.display = "block";
+    }
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script></body>
 </html>
