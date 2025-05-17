@@ -1,105 +1,100 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>فروشگاه بوراج</title>
-  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buraj Socks</title>
   <style>
     body {
-      font-family: 'Vazirmatn', Tahoma, sans-serif;
-      background-color: #fff;
-      color: #000;
       margin: 0;
-      padding: 0;
+      font-family: "Vazirmatn", sans-serif;
+      background-color: #ffffff;
+      color: #000;
       text-align: center;
     }
     header {
       background-color: #000;
       color: #fff;
-      padding: 20px 0;
-      font-size: 28px;
-      font-weight: bold;
-      letter-spacing: 2px;
+      padding: 1rem;
+      font-size: 1.5rem;
     }
-    img.logo {
-      width: 120px;
-      margin: 30px auto 20px;
+    .video-container {
+      margin: 2rem auto;
+      max-width: 600px;
+    }
+    video {
+      width: 100%;
+      border-radius: 16px;
+    }
+    .slider {
+      margin: 2rem auto;
+      max-width: 300px;
+    }
+    .slider img {
+      width: 100%;
+      border-radius: 10px;
+      display: none;
+    }
+    .slider img.active {
       display: block;
     }
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
+    .contact {
+      margin: 2rem auto;
+      font-size: 1.2rem;
     }
-    .product {
+    .contact a {
+      color: #000;
+      text-decoration: none;
+      margin: 0 1rem;
       border: 1px solid #000;
-      border-radius: 10px;
-      width: 200px;
-      padding: 15px;
-      box-sizing: border-box;
-      background: #f9f9f9;
-      transition: box-shadow 0.3s ease;
-    }
-    .product:hover {
-      box-shadow: 0 0 15px #000;
-    }
-    .product img {
-      max-width: 100%;
+      padding: 0.5rem 1rem;
       border-radius: 8px;
-    }
-    .product p {
-      margin-top: 12px;
-      font-size: 14px;
-      color: #222;
-      line-height: 1.3;
+      display: inline-block;
     }
     footer {
-      margin-top: 50px;
-      padding: 20px;
-      background-color: #000;
-      color: #fff;
-      font-size: 16px;
-    }
-    footer a {
-      color: #fff;
-      font-weight: bold;
-      text-decoration: none;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
 
-  <img src="https://raw.githubusercontent.com/mesdaghi00/boraj-socks/main/logo.png" alt="بوراج لوگو" class="logo" />
+  <header>با بوراج به تمرینات کیفیت بده</header>
 
-  <header>به فروشگاه بوراج خوش آمدید</header>
+  <div class="video-container">
+    <video autoplay muted loop playsinline>
+      <source src="boraj-reel.mp4" type="video/mp4">
+      مرورگر شما از پخش این ویدیو پشتیبانی نمی‌کند.
+    </video>
+  </div>
 
-  <section class="products">
-    <div class="product">
-      <img src="https://raw.githubusercontent.com/mesdaghi00/boraj-socks/main/AKS1.jpg" alt="جوراب ۱" />
-      <p>برای ثبت سفارش و اطلاع از موجودی و مشاوره واتس‌اپ پیام دهید</p>
-    </div>
-    <div class="product">
-      <img src="https://raw.githubusercontent.com/mesdaghi00/boraj-socks/main/AKS2.jpg" alt="جوراب ۲" />
-      <p>برای ثبت سفارش و اطلاع از موجودی و مشاوره واتس‌اپ پیام دهید</p>
-    </div>
-    <div class="product">
-      <img src="https://raw.githubusercontent.com/mesdaghi00/boraj-socks/main/AKS3.jpg" alt="جوراب ۳" />
-      <p>برای ثبت سفارش و اطلاع از موجودی و مشاوره واتس‌اپ پیام دهید</p>
-    </div>
-    <div class="product">
-      <img src="https://raw.githubusercontent.com/mesdaghi00/boraj-socks/main/AKS4.jpg" alt="جوراب ۴" />
-      <p>برای ثبت سفارش و اطلاع از موجودی و مشاوره واتس‌اپ پیام دهید</p>
-    </div>
-  </section>
+  <div class="slider">
+    <img src="AKS1.jpg" class="active" alt="محصول ۱" />
+    <img src="AKS2.jpg" alt="محصول ۲" />
+    <img src="AKS3.jpg" alt="محصول ۳" />
+    <img src="AKS4.jpg" alt="محصول ۴" />
+  </div>
+
+  <div class="contact">
+    <p>برای ثبت سفارش و اطلاع از موجودی و مشاوره:</p>
+    <a href="https://wa.me/989123456789" target="_blank">واتساپ</a>
+    <a href="https://instagram.com/_boraj" target="_blank">اینستاگرام</a>
+  </div>
 
   <footer>
-    ارتباط با ما: 
-    <a href="https://wa.me/989919446360" target="_blank">واتس‌اپ بوراج</a>
+    © 2025 Buraj Socks. همه حقوق محفوظ است.
   </footer>
+
+  <script>
+    let images = document.querySelectorAll('.slider img');
+    let current = 0;
+    setInterval(() => {
+      images[current].classList.remove('active');
+      current = (current + 1) % images.length;
+      images[current].classList.add('active');
+    }, 3000);
+  </script>
 
 </body>
 </html>
